@@ -14,18 +14,6 @@ void sig_handler(int sig)
 
 int main(int argc, char* argv[])
 {
-#if 0
-    int loopCnt = 10;
-    if(argc > 1)
-        loopCnt = atoi(argv[1]);
-
-    while(loopCnt-- > 0) {
-        shared_ptr<string> s = genStr();
-        string ss = *s;
-        sortStr(ss);
-        //cout << *s << "," << ss << endl;
-    }
-#else
     int secs = 2;
     if(argc > 1)
         secs = atoi(argv[1]);
@@ -51,7 +39,5 @@ int main(int argc, char* argv[])
         //cout << *s << "," << ss << endl;
     }
     cout << "cnt: " << cnt << endl;
-
-#endif
 }
 
